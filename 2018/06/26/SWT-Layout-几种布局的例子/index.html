@@ -45,7 +45,7 @@
     
     <title>
         
-            第一篇文章 | 
+            SWT Layout 几种布局的例子 | 
         
         IMCKH
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",测试">
+    <meta name="keywords" content=",SWT">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="IMCKH">
-    <meta name="msapplication-starturl" content="http://imckh.github.io/2018/06/25/第一篇文章/">
+    <meta name="msapplication-starturl" content="http://imckh.github.io/2018/06/26/SWT-Layout-几种布局的例子/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="IMCKH">
@@ -232,16 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://imckh.github.io/2018/06/25/第一篇文章/">
+    <meta property="og:url" content="http://imckh.github.io/2018/06/26/SWT-Layout-几种布局的例子/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="第一篇文章 | IMCKH">
+    <meta property="og:title" content="SWT Layout 几种布局的例子 | IMCKH">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="测试"> 
+    <meta property="og:article:tag" content="SWT"> 
 
     
-        <meta property="article:published_time" content="Mon Jun 25 2018 19:26:47 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jun 25 2018 19:28:50 GMT+0800">
+        <meta property="article:published_time" content="Tue Jun 26 2018 22:22:16 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jun 27 2018 22:28:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,7 +249,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://imckh.github.io/2018/06/25/第一篇文章/index.html" />
+        <link rel="canonical" href="http://imckh.github.io/2018/06/26/SWT-Layout-几种布局的例子/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -261,10 +261,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://imckh.github.io/2018/06/25/第一篇文章/index.html",
-    "headline": "第一篇文章",
-    "datePublished": "Mon Jun 25 2018 19:26:47 GMT+0800",
-    "dateModified": "Mon Jun 25 2018 19:28:50 GMT+0800",
+    "mainEntityOfPage": "http://imckh.github.io/2018/06/26/SWT-Layout-几种布局的例子/index.html",
+    "headline": "SWT Layout 几种布局的例子",
+    "datePublished": "Tue Jun 26 2018 22:22:16 GMT+0800",
+    "dateModified": "Wed Jun 27 2018 22:28:46 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "ckh",
@@ -282,7 +282,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",测试",
+    "keywords": ",SWT",
     "description": "",
 }
 </script>
@@ -348,7 +348,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第一篇文章"><span class="post-toc-number">1.</span> <span class="post-toc-text">第一篇文章</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SWT中几种布局的例子"><span class="post-toc-number">1.</span> <span class="post-toc-text">SWT中几种布局的例子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SWT标准布局"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">SWT标准布局</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#FillLayout"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">FillLayout</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#示例"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">示例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RowLayout"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">RowLayout</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介-1"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#示例-1"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">示例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码-1"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在RowLayout上配合使用RowData"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">在RowLayout上配合使用RowData</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TODO-2018-06-27-22-28-35-GridLayout"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">TODO 2018-06-27 22:28:35 GridLayout</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介-2"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#示例-2"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">示例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码-2"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -380,7 +380,7 @@
         
     
             <p class="article-headline-p">
-                第一篇文章
+                SWT Layout 几种布局的例子
             </p>
         </div>
 
@@ -399,7 +399,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ckh</strong>
-        <span>6月 25, 2018</span>
+        <span>6月 26, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -421,7 +421,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACcUlEQVR42u3aS27DMAwFwNz/0u22QBH7PUmWnWC8Ktp8OFqILMnXz1c/Lzw8PDw8PDw8vIfxXvHz//V/f/Pur8l3/f+csdjw8PDwdvJOrtoAk8OOATOx4eHh4e3n5Vd2kgaOr/s2VRTpBA8PD+9hvPyyTj4hKanx8PDwPp2Xh5KnCjw8PLzP5c0HNF8039xrwcPDw4t57QBs5883zPfw8PDwDnn1SlNZcEcBlc2Okwjx8PDwLuYlC1XJoCtfOMiL5vzg8PDw8J7Am2lAJEmlXYQtXoOHh4e3kZenipmGQl5qJ4eOh4eHt583vxCQp5akIM4Pru614OHh4S3ltdd6EmJ+TO2i/8lx4+Hh4W3htWlgJqB2eFYnFTw8PLztvLaV0C4c5I2JsVEcHh4e3h5eG3q7VJqzF4zZ8PDw8Lbw5ovgNsSxNYIL8x4eHh5ezMtbtPllvSpJRMupyWYEHh4e3lLefLk8tjpQF8rxAgEeHh7eXbx2KWps3WpmURUPDw/vXl6yBJCX4GPrBVG5nBwKHh4e3sW8/MLNy+Ic0y5dRW1lPDw8vIt5OSlv+I59fru48DYePDw8vC28mRXVdtC1trAu/mPAw8PDW8Rry9a2uZCX0TPvwsPDw9vJmyl/2wF/e3D5e/Hw8PB28ubXqsYGV2OjsqihjIeHh7eF1zYOji/rVcOtweYFHh4e3kZeMZ4vU8LY0bQNZTw8PLxn8tojaJcS8qWBt9+Lh4eH90hesgLVpo28sXtyBHh4eHgbefnQKx+Dtb/J28d1YsDDw8NbyhsbSiVthboJmywHtIkBDw8Pbynv+x48PDw8PDw8PLwHPL+ggVPvHrkc5QAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACxklEQVR42u3aQY5aMRAEUO5/6WQbKYJUdYOG2M+rEfqAnxfTdJcfv65cD2xsbGxsbGxsbOyvZD/i9efzTz/6r+eTb3n2ybNPe/oubGxs7KPZ//jXX27u9XY3RzbbMzY2NvY97HeVluQ4Xr+efHu9Z2xsbGzs4O+kzCSv5weBjY2Njb0pYPkn5KMlbGxsbOwNOx/QzIY+s2FTux9sbGzsO9mzoPdn//6xfBsbGxv7y9jtahuPPCpOSt1q59jY2NiHsj8RzbZhcH64bfSLjY2NfQO73VBScjZXc/LBU37pExsbG/sedlIwNvFtwshLYP5d2NjY2Dezo5/45UWfzaFsxk/Y2NjYZ7P3I5ukgcmfzI9+FfRiY2NjH8duf9y3I55N09JeKsLGxsa+h51Hre2I/xPtStvAYGNjY9/Jbq9UJkFCwp4dR94UYWNjY5/Kzkfw+fN5e1Nfuykv+mBjY2PfwN4M+meR7azleIwWNjY29m3s/SZy2Cxgzo8MGxsb+zb2rP3YXJFcXaMswwlsbGzss9n5D/22/CTP76OIImDAxsbGPpqdrDas3TQYUXAb7wEbGxv7BnZ7vbJFJhHCe5/ExsbGvofdlpP20szmambS5KxmadjY2NhHsGdbb69I5q/P4opIgY2NjX00u41+N8HwPlSYlTFsbGzss9mboVL73lnz0wbAH5+lYWNjY38NOy9LOSkfHm0igfoCEDY2Nvah7H0xa9uM95bGt12+xMbGxj6I3Y6cZkOofJiVj5NWszRsbGzs/5b9iFfbWrTFLDncTXuDjY2NfTZ7E7XuI+E2SBgWNmxsbOwL2PvxUALOy1JeaIetCDY2NvaV7A1vEw9vRlrY2NjY2KuLMh8YM7XBAzY2NvY97GSo1DYhebEZYl7Gw9jY2Nj3sNvIdj/Qnx3lLGbGxsbGPpt9z8LGxsbGxsbGxsb+mvUbkNYLbXxTIHoAAAAASUVORK5CYII=">
     
 </ul>
 
@@ -435,7 +435,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/测试/">测试</a>
+        <a class="post_tag-link" href="/tags/SWT/">SWT</a>
     </ul>
     
 
@@ -452,7 +452,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=第一篇文章&url=http://imckh.github.io/2018/06/25/第一篇文章/index.html&pic=http://imckh.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=SWT Layout 几种布局的例子&url=http://imckh.github.io/2018/06/26/SWT-Layout-几种布局的例子/index.html&pic=http://imckh.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -461,7 +461,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=第一篇文章&url=http://imckh.github.io/2018/06/25/第一篇文章/index.html&via=ckh" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=SWT Layout 几种布局的例子&url=http://imckh.github.io/2018/06/26/SWT-Layout-几种布局的例子/index.html&via=ckh" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -470,7 +470,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://imckh.github.io/2018/06/25/第一篇文章/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://imckh.github.io/2018/06/26/SWT-Layout-几种布局的例子/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -479,7 +479,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://imckh.github.io/2018/06/25/第一篇文章/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://imckh.github.io/2018/06/26/SWT-Layout-几种布局的例子/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -504,8 +504,103 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h1><p>用来测试。</p>
-
+        <h1 id="SWT中几种布局的例子"><a href="#SWT中几种布局的例子" class="headerlink" title="SWT中几种布局的例子"></a>SWT中几种布局的例子</h1><h2 id="SWT标准布局"><a href="#SWT标准布局" class="headerlink" title="SWT标准布局"></a>SWT标准布局</h2><table>
+<thead>
+<tr>
+<th>布局</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>填充布局</td>
+<td>将控件安排成一行或者一列， 并强制他们大小相同</td>
+</tr>
+<tr>
+<td>表单布局</td>
+<td>通过使用<code>FormAttachments</code>可选的配置每个子代的上下左右边来定位子代</td>
+</tr>
+<tr>
+<td>网格布局</td>
+<td>将子代放置成行和列</td>
+</tr>
+<tr>
+<td>行布局</td>
+<td>将子代放置成水平的行或垂直的列</td>
+</tr>
+</tbody>
+</table>
+<h2 id="FillLayout"><a href="#FillLayout" class="headerlink" title="FillLayout"></a>FillLayout</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>他把组件摆放在一行或者一列， 并强制组件大小一致。一般组件的高度与最高组件一致，宽度与最宽组件一致。FillLayout不折行，不能设置边界距离和间距。可以使用它布局任务栏或者工具栏，或者Group中的一组选择框。当容器只有一个子组件时也可以使用它，如果一个shell只有一个group子组件，FillLayout将使Group完全充满Shell.</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><blockquote>
+<p><img src="http://oytisdkic.bkt.clouddn.com/filllayouth1.png" alt="SWT.HORIZONTAL"> <br><br><code>SWT.HORIZONTAL</code>水平布局</p>
+</blockquote>
+<blockquote>
+<p><img src="http://oytisdkic.bkt.clouddn.com/filllayouth2.png" alt="SWT.HORIZONTAL拉伸"><br><br><code>SWT.HORIZONTAL</code>水平布局拉伸状态</p>
+</blockquote>
+<blockquote>
+<p><img src="http://oytisdkic.bkt.clouddn.com/filllayoutv1.png" alt="SWT.VERTICAL"><br><br><code>SWT.VERTICAL</code>垂直布局(<strong>default</strong>)</p>
+</blockquote>
+<blockquote>
+<p><img src="http://oytisdkic.bkt.clouddn.com/filllayoutv2.png" alt="SWT.VERTICAL拉伸"><br><br><code>SWT.VERTICAL</code>垂直布局拉伸状态</p>
+</blockquote>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Display display = <span class="keyword">new</span> Display();</span><br><span class="line">Shell shell = <span class="keyword">new</span> Shell(display);</span><br><span class="line">FillLayout fillLayout = <span class="keyword">new</span> FillLayout();</span><br><span class="line">fillLayout.type = SWT.VERTICAL;</span><br><span class="line"><span class="comment">// fillLayout.type = SWT.HORIZONTAL;</span></span><br><span class="line">shell.setLayout(fillLayout);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"B1"</span>);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"Wide Button 2"</span>);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"Button3"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="RowLayout"><a href="#RowLayout" class="headerlink" title="RowLayout"></a>RowLayout</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><p>相比<code>FillLayout</code>,他可以提供折行显示, 以及可设置的边界距离和间距. 他有几个参数可以通过<code>setLayoutData</code>方法设置:</p>
+<ul>
+<li><code>type</code>: 控制水平还是垂直<strong>默认水平</strong></li>
+<li><code>warp</code>: 控制RowLayout在当前行没有足够空间时是否折行显示组件. <strong>默认折行</strong></li>
+<li><code>pack</code>:<ul>
+<li>true: 组件使用他们的原始尺寸, 并排列时尽量远离左边. <strong>默认为true</strong></li>
+<li>false: 组件将填充可用空间, 跟FillLayout类似</li>
+</ul>
+</li>
+<li><code>justify</code>:<ul>
+<li>true: 组件从左至右伸展. 如果容器变大了, 那么多余的空间被平均分配到组件上.</li>
+<li>如果<code>pack</code>和<code>justify</code>同时为true, 组件将保持他们的原始大小, 多余的空间被平均分配到组件之间的空隙上. <strong>默认为false</strong></li>
+</ul>
+</li>
+<li><code>MarginLeft</code>, <code>MarginTop</code>,<code>MarginRight</code>,<code>MarginBottom</code> 这些控制组件之间的距离(像素), 以及组件与容器之间的边距, <strong>默认RowLayout保留了3个像素的边距和间距</strong></li>
+</ul>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><table>
+<thead>
+<tr>
+<th>状态代码</th>
+<th>初始状态</th>
+<th>调整尺寸后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wrap = true<br>pack = true<br>justify = false<br>type = SWT.VERTICAL<br></td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtptjfth1.png" alt="默认"></td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtptjfth2.png" alt="拉伸"></td>
+</tr>
+<tr>
+<td>wrap = false<br>没有足够空间时裁边</td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtptjfth1.png" alt="默认"></td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wfptjfth2.png" alt="伸展"></td>
+</tr>
+<tr>
+<td>pack = false<br>所有组件尺寸一致</td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtpfjfth1.png" alt="pack = false"></td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtpfjfth2.png" alt="pack = false伸展"></td>
+</tr>
+<tr>
+<td>justify = true<br>组件根据空间进行伸展</td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtptjtth1.png" alt="justify = true"></td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtptjtth2.png" alt="justify = true伸展"></td>
+</tr>
+<tr>
+<td>type = SWT.VERTICAL<br>组件垂直摆放</td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtptjftv1.png" alt="type = SWT.VERTICAL"></td>
+<td><img src="http://oytisdkic.bkt.clouddn.com/wtptjftv2.png" alt="type = SWT.VERTICAL调整"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><p>共用部分代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Display display = <span class="keyword">new</span> Display();</span><br><span class="line">Shell shell = <span class="keyword">new</span> Shell(display);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在这里插入代码</span></span><br><span class="line"></span><br><span class="line">shell.pack();</span><br><span class="line">shell.open();</span><br><span class="line"><span class="keyword">while</span> (!shell.isDisposed()) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!display.readAndDispatch()) &#123;</span><br><span class="line">        display.sleep();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">display.dispose();</span><br></pre></td></tr></table></figure></p>
+<p>由于除了layout的配置和按钮添加部分的代码不同外, 其他代码都一样, 所以这里只给出layout配置部分<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">RowLayout rowLayout = <span class="keyword">new</span> RowLayout();</span><br><span class="line"></span><br><span class="line">rowLayout.wrap = <span class="keyword">true</span>;</span><br><span class="line">rowLayout.pack = <span class="keyword">true</span>;</span><br><span class="line">rowLayout.justify = <span class="keyword">false</span>;</span><br><span class="line">rowLayout.type = SWT.VERTICAL;</span><br><span class="line"></span><br><span class="line">rowLayout.marginTop = <span class="number">5</span>;</span><br><span class="line">rowLayout.marginLeft = <span class="number">5</span>;</span><br><span class="line">rowLayout.marginRight = <span class="number">5</span>;</span><br><span class="line">rowLayout.marginBottom = <span class="number">5</span>;</span><br><span class="line">rowLayout.spacing = <span class="number">0</span>;</span><br><span class="line">shell.setLayout(rowLayout);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"B1"</span>);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"Wide Button 2"</span>);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"Button3"</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="在RowLayout上配合使用RowData"><a href="#在RowLayout上配合使用RowData" class="headerlink" title="在RowLayout上配合使用RowData"></a>在RowLayout上配合使用RowData</h3><p>每个由RowLayout控制的组件可以通过RowData来设置其原始尺寸大小<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">shell.setLayout(<span class="keyword">new</span> RowLayout());</span><br><span class="line"></span><br><span class="line">Button button1 = <span class="keyword">new</span> Button(shell, SWT.PUSH);</span><br><span class="line">button1.setText(<span class="string">"Button1"</span>);</span><br><span class="line">button1.setLayoutData(<span class="keyword">new</span> RowData(<span class="number">50</span>, <span class="number">40</span>));</span><br><span class="line">Button button2 = <span class="keyword">new</span> Button(shell, SWT.PUSH);</span><br><span class="line">button2.setText(<span class="string">"Button2"</span>);</span><br><span class="line">button2.setLayoutData(<span class="keyword">new</span> RowData(<span class="number">50</span>, <span class="number">30</span>));</span><br><span class="line">Button button3 = <span class="keyword">new</span> Button(shell, SWT.PUSH);</span><br><span class="line">button3.setText(<span class="string">"Button3"</span>);</span><br><span class="line">button3.setLayoutData(<span class="keyword">new</span> RowData(<span class="number">50</span>, <span class="number">20</span>));</span><br></pre></td></tr></table></figure></p>
+<p>结果如下所示<br><img src="http://oytisdkic.bkt.clouddn.com/rowdataexample.png" alt="type = SWT.VERTICAL调整"></p>
+<h2 id="TODO-2018-06-27-22-28-35-GridLayout"><a href="#TODO-2018-06-27-22-28-35-GridLayout" class="headerlink" title="TODO 2018-06-27 22:28:35 GridLayout"></a>TODO 2018-06-27 22:28:35 GridLayout</h2><h3 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h3><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3>
         
     
 
@@ -525,19 +620,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/06/26/SWT-Layout-几种布局的例子/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/06/25/第一篇文章/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
