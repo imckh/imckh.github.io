@@ -4,9 +4,9 @@
 
 # Head info
 head:
-    favicon: "/img/favico.png"
-    high_res_favicon: "/img/favico.png"
-    apple_touch_icon: "/img/favico.png"
+    favicon: "/img/favicon.png"
+    high_res_favicon: "/img/favicon.png"
+    apple_touch_icon: "/img/favicon.png"
     keywords: java, swt, jface, translate
     site_verification:
         google: cFodRSPJYrqEbG_owMLKaWrBCnsKrt6oISzUtXJUvPM
