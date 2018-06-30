@@ -548,7 +548,16 @@
 <blockquote>
 <p><img src="http://oytisdkic.bkt.clouddn.com/filllayoutv2.png" alt="SWT.VERTICAL拉伸"><br><br><code>SWT.VERTICAL</code>垂直布局拉伸状态</p>
 </blockquote>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Display display = <span class="keyword">new</span> Display();</span><br><span class="line">Shell shell = <span class="keyword">new</span> Shell(display);</span><br><span class="line">FillLayout fillLayout = <span class="keyword">new</span> FillLayout();</span><br><span class="line">fillLayout.type = SWT.VERTICAL;</span><br><span class="line"><span class="comment">// fillLayout.type = SWT.HORIZONTAL;</span></span><br><span class="line">shell.setLayout(fillLayout);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"B1"</span>);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"Wide Button 2"</span>);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"Button3"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code class="java">Display display = new Display();
+Shell shell = new Shell(display);
+FillLayout fillLayout = new FillLayout();
+fillLayout.type = SWT.VERTICAL;
+// fillLayout.type = SWT.HORIZONTAL;
+shell.setLayout(fillLayout);
+new Button(shell, SWT.PUSH).setText(&quot;B1&quot;);
+new Button(shell, SWT.PUSH).setText(&quot;Wide Button 2&quot;);
+new Button(shell, SWT.PUSH).setText(&quot;Button3&quot;);
+</code></pre>
 <h2 id="RowLayout"><a href="#RowLayout" class="headerlink" title="RowLayout"></a>RowLayout</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><p>相比<code>FillLayout</code>,他可以提供折行显示, 以及可设置的边界距离和间距. 他有几个参数可以通过<code>setLayoutData</code>方法设置:</p>
 <ul>
 <li><code>type</code>: 控制水平还是垂直<strong>默认水平</strong></li>
@@ -601,9 +610,53 @@
 </tr>
 </tbody>
 </table>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><p>共用部分代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Display display = <span class="keyword">new</span> Display();</span><br><span class="line">Shell shell = <span class="keyword">new</span> Shell(display);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在这里插入代码</span></span><br><span class="line"></span><br><span class="line">shell.pack();</span><br><span class="line">shell.open();</span><br><span class="line"><span class="keyword">while</span> (!shell.isDisposed()) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!display.readAndDispatch()) &#123;</span><br><span class="line">        display.sleep();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">display.dispose();</span><br></pre></td></tr></table></figure></p>
-<p>由于除了layout的配置和按钮添加部分的代码不同外, 其他代码都一样, 所以这里只给出layout配置部分<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">RowLayout rowLayout = <span class="keyword">new</span> RowLayout();</span><br><span class="line"></span><br><span class="line">rowLayout.wrap = <span class="keyword">true</span>;</span><br><span class="line">rowLayout.pack = <span class="keyword">true</span>;</span><br><span class="line">rowLayout.justify = <span class="keyword">false</span>;</span><br><span class="line">rowLayout.type = SWT.VERTICAL;</span><br><span class="line"></span><br><span class="line">rowLayout.marginTop = <span class="number">5</span>;</span><br><span class="line">rowLayout.marginLeft = <span class="number">5</span>;</span><br><span class="line">rowLayout.marginRight = <span class="number">5</span>;</span><br><span class="line">rowLayout.marginBottom = <span class="number">5</span>;</span><br><span class="line">rowLayout.spacing = <span class="number">0</span>;</span><br><span class="line">shell.setLayout(rowLayout);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"B1"</span>);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"Wide Button 2"</span>);</span><br><span class="line"><span class="keyword">new</span> Button(shell, SWT.PUSH).setText(<span class="string">"Button3"</span>);</span><br></pre></td></tr></table></figure></p>
-<h3 id="在RowLayout上配合使用RowData"><a href="#在RowLayout上配合使用RowData" class="headerlink" title="在RowLayout上配合使用RowData"></a>在RowLayout上配合使用RowData</h3><p>每个由RowLayout控制的组件可以通过RowData来设置其原始尺寸大小<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">shell.setLayout(<span class="keyword">new</span> RowLayout());</span><br><span class="line"></span><br><span class="line">Button button1 = <span class="keyword">new</span> Button(shell, SWT.PUSH);</span><br><span class="line">button1.setText(<span class="string">"Button1"</span>);</span><br><span class="line">button1.setLayoutData(<span class="keyword">new</span> RowData(<span class="number">50</span>, <span class="number">40</span>));</span><br><span class="line">Button button2 = <span class="keyword">new</span> Button(shell, SWT.PUSH);</span><br><span class="line">button2.setText(<span class="string">"Button2"</span>);</span><br><span class="line">button2.setLayoutData(<span class="keyword">new</span> RowData(<span class="number">50</span>, <span class="number">30</span>));</span><br><span class="line">Button button3 = <span class="keyword">new</span> Button(shell, SWT.PUSH);</span><br><span class="line">button3.setText(<span class="string">"Button3"</span>);</span><br><span class="line">button3.setLayoutData(<span class="keyword">new</span> RowData(<span class="number">50</span>, <span class="number">20</span>));</span><br></pre></td></tr></table></figure></p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><p>共用部分代码</p>
+<pre><code class="java">Display display = new Display();
+Shell shell = new Shell(display);
+
+// 在这里插入代码
+
+shell.pack();
+shell.open();
+while (!shell.isDisposed()) {
+    if (!display.readAndDispatch()) {
+        display.sleep();
+    }
+}
+display.dispose();
+</code></pre>
+<p>由于除了layout的配置和按钮添加部分的代码不同外, 其他代码都一样, 所以这里只给出layout配置部分</p>
+<pre><code class="java">RowLayout rowLayout = new RowLayout();
+
+rowLayout.wrap = true;
+rowLayout.pack = true;
+rowLayout.justify = false;
+rowLayout.type = SWT.VERTICAL;
+
+rowLayout.marginTop = 5;
+rowLayout.marginLeft = 5;
+rowLayout.marginRight = 5;
+rowLayout.marginBottom = 5;
+rowLayout.spacing = 0;
+shell.setLayout(rowLayout);
+
+new Button(shell, SWT.PUSH).setText(&quot;B1&quot;);
+new Button(shell, SWT.PUSH).setText(&quot;Wide Button 2&quot;);
+new Button(shell, SWT.PUSH).setText(&quot;Button3&quot;);
+</code></pre>
+<h3 id="在RowLayout上配合使用RowData"><a href="#在RowLayout上配合使用RowData" class="headerlink" title="在RowLayout上配合使用RowData"></a>在RowLayout上配合使用RowData</h3><p>每个由RowLayout控制的组件可以通过RowData来设置其原始尺寸大小</p>
+<pre><code class="java">shell.setLayout(new RowLayout());
+
+Button button1 = new Button(shell, SWT.PUSH);
+button1.setText(&quot;Button1&quot;);
+button1.setLayoutData(new RowData(50, 40));
+Button button2 = new Button(shell, SWT.PUSH);
+button2.setText(&quot;Button2&quot;);
+button2.setLayoutData(new RowData(50, 30));
+Button button3 = new Button(shell, SWT.PUSH);
+button3.setText(&quot;Button3&quot;);
+button3.setLayoutData(new RowData(50, 20));
+</code></pre>
 <p>结果如下所示<br><img src="http://oytisdkic.bkt.clouddn.com/rowdataexample.png" alt="type = SWT.VERTICAL调整"></p>
 <h2 id="TODO-2018-06-27-22-28-35-GridLayout"><a href="#TODO-2018-06-27-22-28-35-GridLayout" class="headerlink" title="TODO 2018-06-27 22:28:35 GridLayout"></a>TODO 2018-06-27 22:28:35 GridLayout</h2><h3 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h3><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3>
         
@@ -618,6 +671,32 @@
                 <!-- Post Comments -->
                 
                     
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
+</div>
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'imckh',
+        repo: 'imckh.github.io',
+        oauth: {
+            client_id: '3e5960253154ab0d8ae1',
+            client_secret: '70e703612fbbd28c83b55a28f63838ed30fe4bdc',
+        },
+    })
+    gitment.render('container')
+</script>
+
                 
             </div>
 
@@ -938,6 +1017,8 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+   <!-- Gitment -->
 
 
 
