@@ -529,13 +529,11 @@
 <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
 
 <script>
-    var id = md5(location.pathname);
+    var md5id = md5(location.pathname);
 
     console.log('----------------------------------------------');
     console.log("location.pathname: " + location.pathname);
-    console.log(md5(location.pathname));
-    console.log("location.href:" + location.href);
-    console.log(md5(location.href));
+    console.log("md5(location.pathname):" + md5(location.pathname));
     console.log("----------------------------------------------");
 
     var gitalk = new Gitalk({
@@ -546,7 +544,7 @@
             admin: ['imckh'],
             // facebook-like distraction free mode
             distractionFreeMode: false,
-            id
+            id: md5id
         })
    gitalk.render('gitalk-container')
 </script>
