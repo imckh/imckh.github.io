@@ -153,9 +153,11 @@ shell.setLayout(gridLayout);
 new Button(shell, SWT.PUSH).setText("B1");
 // 加入五个Button
 ```
-numColumns = 1 | numColumns = 2 | numColumns = 3
+
+numColumns=1 | numColumns=2 | numColumns=3
 --- | --- | ---
 ![numColumns = 1 ](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_gridLaiout_numcolumns1_2018-07-15_16-16-36.jpg) | ![numColumns = 2 ](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_gridLaiout_numcolumns2_2018-07-15_16-16-36.jpg) | ![numColumns = 3 ](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_gridLaiout_numcolumns3_2018-07-15_16-16-36.jpg)
+
 - `makeColumnsEqualWidth`
 强制各列具有相同的宽度, **默认false**
 
@@ -192,12 +194,14 @@ GridData gridData = new GridData(GridData.HORIZONTAL_ALIGN_FILL | GridData.GRAB_
   - FILL
 
   参考前面五个按钮的例子, 设置三列, 只对button5设置:
-  alignment | 示例
-  --- | ---
-  GridData.BEGINNING | ![BEGINNING](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_griddata_alignment_beginning_2018-07-15_16-16-36.jpg)
-  GridData.CENTER | ![CENTER](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_griddata_alignment_center_2018-07-15_16-16-36.jpg)
-  GridData.END | ![END](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_griddata_alignment_end_2018-07-15_16-16-36.jpg)
-  GridData.FILL | ![FILL](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_griddata_alignment_beginning_fill.jpg)
+
+alignment | 示例
+--- | ---
+GridData.BEGINNING | ![BEGINNING](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_griddata_alignment_beginning_2018-07-15_16-16-36.jpg)
+GridData.CENTER | ![CENTER](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_griddata_alignment_center_2018-07-15_16-16-36.jpg)
+GridData.END | ![END](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_griddata_alignment_end_2018-07-15_16-16-36.jpg)
+GridData.FILL | ![FILL](http://oytisdkic.bkt.clouddn.com/imckh.com/SWT-Layout-%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E7%9A%84%E4%BE%8B%E5%AD%90/swtlayout_griddata_alignment_beginning_fill.jpg)
+
 - `horizontalIndent`
 指定组件向右移动指定的像素值, **只有当`horizontalAlignment`为`BEGINNING`时有效, `FIll`时会将左侧不填满**
   - BEGINNING
